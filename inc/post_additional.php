@@ -13,7 +13,7 @@
             From the Global Configuration panel, you can define a standard set of additional services that apply across the entire system.
         </i>
         <ul class="_abp_list_margin_xs">
-            <li>👉 Create global additional services (e.g. cleaning, pickup, insurance, setup, etc.)</li>
+            <li>👉 Create global additional services (e.g. meals, equipment, insurance, setup, etc.)</li>
             <li>👉 Enable or disable services globally</li>
             <li>👉 Maintain a centralized service list for all posts</li>
         </ul>

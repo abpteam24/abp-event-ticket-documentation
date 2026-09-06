@@ -10,7 +10,7 @@
         </label>
         <div class="_divider_xs"></div>
         <label>
-            Using the same booking experience available on the frontend, administrators can easily select rental items, choose pickup and return dates and times, configure booking details, and generate orders within a few clicks.
+            Using the same booking experience available on the frontend, administrators can select event dates and sessions, configure booking details, and generate orders within a few clicks.
         </label>
         <div class="_divider_xs"></div>
         <ul class="_abp">
