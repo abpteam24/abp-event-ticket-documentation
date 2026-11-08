@@ -1,256 +1,189 @@
 <?php
-	if ( ! defined( 'ABSPATH' ) ) {
-		exit; // Exit if accessed directly
-	} ?>
-    <div class="tab_item" data-tabs="#abpet_shortcode">
-        <h2 class="_abp_color_theme">Transport Booking - Shortcodes</h2>
-        <div class="_divider_xs"></div>
-        <i class="_color_7_fs_label_mar_tb_d_block">
-            Below are all available Transport Booking shortcodes with their details. You can use these shortcodes in any page, post, or widget area. Each shortcode supports parameters that allow you to control layout, filtering, and frontend behavior. Please use parameters carefully, as they directly affect output display and rental functionality.
-        </i>
-        <!-- Booking shortcode -->
-        <pre>[<strong class="_abp_color_theme">abpet-booking</strong>]</pre>
-        <label>
-            This shortcode allows you to display the complete Transport Booking booking form on any page, post, or custom layout. This provides a flexible way to create a dedicated booking page without requiring visitors to access a specific rental item page.
-        </label>
-        <label>
-            When a rental item is selected, customers can complete the entire booking process directly from the shortcode page. The booking experience is identical to the rental details page, ensuring a consistent and user-friendly reservation workflow.
-        </label>
-        <table class="_abp_mar_t">
-            <tbody>
-            <tr>
-                <th>Parameter</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>style</td>
-                <td> Layout style of the listing. <strong class="_abp_color_theme">grid, list, masonry</strong> | Default: <strong class="_abp_color_theme">grid</strong> <code>[abpet-booking style="list"]</code></td>
-            </tr>
-            <tr>
-                <td>post_id</td>
-                <td> Display a specific post. When used, other filtering parameters will be ignored. <code>[abpet-booking post_id="123"]</code></td>
-            </tr>
-            <tr>
-                <td>cat_id</td>
-                <td> Filter posts by category ID. <code>[abpet-booking cat_id="1"]</code></td>
-            </tr>
-            <tr>
-                <td>loc_id</td>
-                <td> Filter posts by location ID. <code>[abpet-booking loc_id="2"]</code></td>
-            </tr>
-            <tr>
-                <td>rent_rule</td>
-                <td> Filter by rental type: <strong class="_abp_color_theme">hourly, daily, multi_day, monthly, multi_month</strong> <code>[abpet-booking rent_rule="daily"]</code></td>
-            </tr>
-            <tr>
-                <td>show</td>
-                <td> Number of posts to display. Default: <strong class="_abp_color_theme">9</strong> <code>[abpet-booking show="12"]</code></td>
-            </tr>
-            <tr>
-                <td>column</td>
-                <td> Number of columns (only works with grid layout). Default: <strong class="_abp_color_theme">3</strong> <code>[abpet-booking column="4"]</code></td>
-            </tr>
-            </tbody>
-        </table>
-        <!-- Post List shortcode -->
-        <pre>[<strong class="_abp_color_theme">abpet-post</strong>]</pre>
-        <label>
-            Use this shortcode to display the rental post listing anywhere on your website. You can place it inside any page, post, or widget area. The following parameters allow you to customize the output.
-        </label>>
-        <table class="_abp">
-            <tbody>
-            <tr>
-                <th>Parameter</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>style</td>
-                <td>
-                    Layout style of the listing.
-                    <strong class="_abp_color_theme">grid, list, masonry</strong> |
-                    Default: <strong class="_abp_color_theme">grid</strong>
-                    <code>[abpet-post style="list"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>post_id</td>
-                <td>
-                    Display a specific post. When used, other filtering parameters will be ignored.
-                    <code>[abpet-post post_id="123"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>cat_id</td>
-                <td>
-                    Filter posts by category ID.
-                    <code>[abpet-post cat_id="1"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>loc_id</td>
-                <td>
-                    Filter posts by location ID.
-                    <code>[abpet-post loc_id="2"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>rent_rule</td>
-                <td>
-                    Filter by rental type:
-                    <strong class="_abp_color_theme">hourly, daily, multi_day, monthly, multi_month</strong>
-                    <code>[abpet-post rent_rule="daily"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>show</td>
-                <td>
-                    Number of posts to display.
-                    Default: <strong class="_abp_color_theme">9</strong>
-                    <code>[abpet-post show="12"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>column</td>
-                <td>
-                    Number of columns (only works with grid layout).
-                    Default: <strong class="_abp_color_theme">3</strong>
-                    <code>[abpet-post column="4"]</code>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <!-- Property List shortcode -->
-        <pre>[<strong class="_abp_color_theme">abpet-property</strong>]</pre>
-        <label>
-            Use this shortcode to display rental property listings anywhere on your website.
-        </label>>
-        <table class="_abp">
-            <tbody>
-            <tr>
-                <th>Parameter</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>style</td>
-                <td>
-                    Layout style.
-                    <strong class="_abp_color_theme">grid, list</strong> |
-                    Default: <strong class="_abp_color_theme">grid</strong>
-                    <code>[abpet-property style="list"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>post_id</td>
-                <td>
-                    Display a specific property. Overrides other filters.
-                    <code>[abpet-property post_id="123"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>cat_id</td>
-                <td>
-                    Filter by category ID.
-                    <code>[abpet-property cat_id="1"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>loc_id</td>
-                <td>
-                    Filter by location ID.
-                    <code>[abpet-property loc_id="2"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>brand_id</td>
-                <td>
-                    Filter by brand ID.
-                    <code>[abpet-property brand_id="3"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>rent_rule</td>
-                <td>
-                    Rental type filter:
-                    <strong class="_abp_color_theme">hourly, daily, multi_day, monthly, multi_month</strong>
-                    <code>[abpet-property rent_rule="monthly"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>show</td>
-                <td>
-                    Number of properties to display.
-                    Default: <strong class="_abp_color_theme">9</strong>
-                    <code>[abpet-property show="15"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>column</td>
-                <td>
-                    Number of columns (grid layout only).
-                    Default: <strong class="_abp_color_theme">3</strong>
-                    <code>[abpet-property column="4"]</code>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <!-- Gallery shortcode -->
-        <pre>[<strong class="_abp_color_theme">abpet-gallery</strong>]</pre>
-        <label>
-            Use this shortcode to display property image galleries or sliders anywhere on your website.
-        </label>>
-        <table class="_abp">
-            <tbody>
-            <tr>
-                <th>Parameter</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>style</td>
-                <td>
-                    Display type:
-                    <strong class="_abp_color_theme">gallery, slider</strong> |
-                    Default: <strong class="_abp_color_theme">gallery</strong>
-                    <code>[abpet-gallery slider_style="slider"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>post_id</td>
-                <td>
-                    Show gallery for a specific post only.
-                    <code>[abpet-gallery post_id="123"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>cat_id</td>
-                <td>
-                    Filter gallery by category.
-                    <code>[abpet-gallery cat_id="1"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>loc_id</td>
-                <td>
-                    Filter gallery by location.
-                    <code>[abpet-gallery loc_id="2"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>rent_rule</td>
-                <td>
-                    Filter by rental type:
-                    <strong class="_abp_color_theme">hourly, daily, multi_day, monthly, multi_month</strong>
-                    <code>[abpet-gallery rent_rule="daily"]</code>
-                </td>
-            </tr>
-            <tr>
-                <td>column</td>
-                <td>
-                    Number of images per row (gallery mode only).
-                    Default: <strong class="_abp_color_theme">3</strong>
-                    <code>[abpet-gallery column="4"]</code>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
+} ?>
+<div class="abet_doc_panel" data-tabs="#abet_shortcode">
+    <div class="abet_doc_page_head">
+        <h2>🔗 Shortcodes</h2>
+        <p class="abet_doc_lede">
+            ABP Event Ticket provides shortcodes that let you display event listings, booking interfaces, and image
+            galleries anywhere on your website — pages, posts, widgets, or other supported WordPress areas.
+        </p>
     </div>
-<?php
+
+    <h3>🔄 Overview</h3>
+    <p class="abet_doc_section_intro">
+        Each shortcode supports a set of parameters for controlling layout, filtering, item count, and frontend
+        display. Parameters can be combined to build customised event listing and booking pages.
+    </p>
+
+    <div class="abet_doc_callout abet_doc_callout_note">
+        <strong>ℹ️ Parameter usage</strong>
+        Use only the parameters supported by each shortcode. Invalid or unsupported parameters are ignored and do not
+        affect the output.
+    </div>
+
+    <h3>🎟️ Booking Shortcode</h3>
+    <p class="abet_doc_section_intro">
+        The <code>[abpet-booking]</code> shortcode displays the booking interface. Use it to create a dedicated booking
+        page where customers can browse available events and complete a purchase. Show all events, or filter by a
+        specific event, category, location, organizer, brand, or speaker.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Description</th>
+                <th>Default</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>post_id</code></td>
+                <td>Display a specific event. When used, other filtering parameters are ignored. Example: <code>[abpet-booking post_id="123"]</code></td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td><code>cat_id</code></td>
+                <td>Filter events by category ID. Example: <code>[abpet-booking cat_id="5"]</code></td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td><code>loc_id</code></td>
+                <td>Filter events by location ID. Example: <code>[abpet-booking loc_id="2"]</code></td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td><code>organizer_id</code></td>
+                <td>Filter events by organizer ID. Example: <code>[abpet-booking organizer_id="3"]</code></td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td><code>brand_id</code></td>
+                <td>Filter events by brand ID. Example: <code>[abpet-booking brand_id="4"]</code></td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td><code>speaker_id</code></td>
+                <td>Filter events by speaker ID. Example: <code>[abpet-booking speaker_id="7"]</code></td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td><code>filter</code></td>
+                <td>Choose which taxonomy dropdowns the event list filter bar shows. Use <code>all</code> (default), <code>none</code> to hide the bar, a list such as <code>category,location</code>, or an exclusion list such as <code>-speaker</code>. Example: <code>[abpet-post filter="category,brand"]</code>. A taxonomy switched OFF in Event Ticket → Configuration → Feature ON/OFF never appears.</td>
+                <td>all</td>
+            </tr>
+            <tr>
+                <td><code>style</code></td>
+                <td>Layout style. Options: <code>grid</code>, <code>list</code>, <code>missionary</code>, <code>minimal</code>.</td>
+                <td>grid</td>
+            </tr>
+            <tr>
+                <td><code>column</code></td>
+                <td>Number of columns for grid layouts (1–10). Example: <code>[abpet-booking column="3"]</code></td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td><code>show</code></td>
+                <td>Number of events to display (0–100).</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><code>sort</code></td>
+                <td>Sort direction. Options: <code>ASC</code>, <code>DESC</code>.</td>
+                <td>ASC</td>
+            </tr>
+            <tr>
+                <td><code>pagination</code></td>
+                <td>Enable or disable pagination. Options: <code>yes</code>, <code>no</code>.</td>
+                <td>yes</td>
+            </tr>
+            <tr>
+                <td><code>pagination-style</code></td>
+                <td>Pagination style. Options: <code>live</code>, <code>number</code>.</td>
+                <td>live</td>
+            </tr>
+            <tr>
+                <td><code>form</code></td>
+                <td>Search form style. Options: <code>inline</code>.</td>
+                <td>inline</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="abet_doc_screen" data-abet-doc-img="<?php echo esc_url(ABET_DOC_URL . '/') ?>image/53-frontend-ticket-booking.png"><img class="abet_doc_screen_img" src="#" alt="Frontend ticket booking"></div>
+
+    <h3>📄 Post List Shortcode</h3>
+    <p class="abet_doc_section_intro">
+        The <code>[abpet-post]</code> shortcode displays events without the booking/search interface. It accepts the
+        same <code>post_id</code>, category, location, organizer, brand, speaker, filter, style, column, show, sort, and
+        pagination parameters as the booking shortcode. When <code>post_id</code> is set, the single event's details
+        template is rendered instead of a list.
+    </p>
+
+    <div class="abet_doc_screen" data-abet-doc-img="<?php echo esc_url(ABET_DOC_URL . '/') ?>image/46-frontend-event-list.png"><img class="abet_doc_screen_img" src="#" alt="Frontend event list"></div>
+    <div class="abet_doc_screen" data-abet-doc-img="<?php echo esc_url(ABET_DOC_URL . '/') ?>image/49-frontend-event-list-cards.png"><img class="abet_doc_screen_img" src="#" alt="Frontend event list cards"></div>
+    <div class="abet_doc_screen" data-abet-doc-img="<?php echo esc_url(ABET_DOC_URL . '/') ?>image/50-frontend-event-list-prices.png"><img class="abet_doc_screen_img" src="#" alt="Frontend event list prices"></div>
+    <div class="abet_doc_screen" data-abet-doc-img="<?php echo esc_url(ABET_DOC_URL . '/') ?>image/51-frontend-event-details.png"><img class="abet_doc_screen_img" src="#" alt="Frontend event details"></div>
+    <div class="abet_doc_screen" data-abet-doc-img="<?php echo esc_url(ABET_DOC_URL . '/') ?>image/52-frontend-event-details-highlights.png"><img class="abet_doc_screen_img" src="#" alt="Frontend event details highlights"></div>
+
+    <h3>🖼️ Gallery Shortcode</h3>
+    <p class="abet_doc_section_intro">
+        The <code>[abpet-gallery]</code> shortcode displays the images saved in the event Slider/Gallery field.
+        With <code>post_id</code> it shows that event's gallery; without it, the images of all events matched by the
+        filter parameters are combined. <code>slider_style</code> switches between a <code>gallery</code> grid and a
+        <code>slider</code> carousel, and <code>column</code> / <code>show</code> control the layout and item count.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Description</th>
+                <th>Default</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>post_id</code></td>
+                <td>Show the gallery of one event. Example: <code>[abpet-gallery post_id="123"]</code></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><code>slider_style</code></td>
+                <td>Gallery layout. Options: <code>gallery</code>, <code>slider</code>.</td>
+                <td>gallery</td>
+            </tr>
+            <tr>
+                <td><code>column</code></td>
+                <td>Images per row (1-10). Also sets the number of visible slider items.</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td><code>show</code></td>
+                <td>Maximum slider items to show. <code>0</code> means the column value times three.</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>🎟️ PRO Ticket Lookup Shortcode <span class="abet_doc_badge abet_doc_badge_pro">PRO</span></h3>
+    <p class="abet_doc_section_intro">
+        The <code>[abpet-ticket]</code> shortcode creates a ticket lookup page where a customer or authorized staff
+        member can view a booking, download its ticket PDF, and use the check-in action when permitted.
+    </p>
+    <ol class="abet_doc_steps">
+        <li>Create a WordPress page and add <code>[abpet-ticket]</code> to its content, then publish it.</li>
+        <li>Sign in to the site before using the page. Signed-out visitors are asked to log in.</li>
+        <li>Enter the ticket PIN in <em>Order ID / Ticket ID</em>, then choose <em>View Ticket</em>. The PIN format is <code>ORDER_ID-BOOKING_ID</code>, for example <code>123-5</code>.</li>
+        <li>Review the booking details. PDF download requires ABP PDF Tools. Check-in is available to logged-in users who are authorized for that booking.</li>
+    </ol>
+    <div class="abet_doc_callout abet_doc_callout_warn">
+        <strong>⚠️ Keep ticket PINs private</strong>
+        The PIN identifies a booking. Share it only with the customer or authorized event staff. The lookup page enforces login and booking ownership/role checks.
+    </div>
+
+    <div class="abet_doc_callout abet_doc_callout_tip">
+        <strong>💡 Tip</strong>
+        Combine filters to build focused pages, for example a category-only listing or a single event's booking page.
+    </div>
+</div>

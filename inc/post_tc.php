@@ -1,54 +1,59 @@
 <?php
-	if ( ! defined( 'ABSPATH' ) ) {
-		exit; // Exit if accessed directly
-	} ?>
-    <div class="tab_item" data-tabs="#abpet_tc">
-        <h2 class="_abp_color_theme">Terms & Conditions Configuration</h2>
-        <div class="_divider_xxs"></div>
-        <label>
-            The Terms & Conditions Configuration system allows you to manage and customize the terms that clients must agree to before completing a booking or rental. Like Additional Services, this feature supports both global and post-level configuration for maximum flexibility.
-        </label>
-        <h6 class="_abp">🌍 Global Terms & Conditions</h6>
-        <i>
-            From the Global Configuration panel, you can create and manage standard terms that will be applied across all posts.
-        </i>
-        <ul class="_abp_list_margin_xs">
-            <li>👉 Define global terms and conditions content</li>
-            <li>👉 Enable or disable terms acceptance globally</li>
-            <li>👉 Maintain a consistent policy for all properties</li>
-        </ul>
-        <h6 class="_abp">🏠 Custom Post-Level Terms</h6>
-        <i>
-            Each individual post can also have its own custom terms and conditions configuration.
-        </i>
-        <ul class="_abp_list_margin_xs">
-            <li>👉 Import terms from global configuration</li>
-            <li>👉 Add new custom terms specific to that post</li>
-            <li>👉 Modify imported terms content as needed</li>
-            <li>👉 Remove or replace terms per post requirement</li>
-        </ul>
-        <h6 class="_abp">🔄 Import & Customization System</h6>
-        <ul class="_abp_list_margin_xs">
-            <li>👉 One-click import from global terms</li>
-            <li>👉 Fully editable after import</li>
-            <li>👉 Combine global and custom terms if required</li>
-            <li>👉 Control visibility and acceptance rules</li>
-        </ul>
-        <h6 class="_abp">⚙️ Smart Behavior</h6>
-        <ul class="_abp_list_margin_xs">
-            <li>Global terms act as a default policy template</li>
-            <li>Each post can override or extend global terms</li>
-            <li>Global changes do not overwrite custom post-level edits</li>
-        </ul>
-        <h6 class="_abp">🚀 Benefits</h6>
-        <ul class="_abp_list_margin_xs">
-            <li>👉 Ensures legal and policy consistency across the platform</li>
-            <li>👉 Saves time with reusable global templates</li>
-            <li>👉 Allows full customization per property</li>
-            <li>👉 Improves compliance and user transparency</li>
-        </ul>
-        <div class="abp_image" data-image-href="<?php echo esc_url( ABPET_DOC_URL . '/' ) ?>image/terms_condition.png">
-            <img class="_img_control" src="#" alt="Terms & Conditions Configuration Overview">
-        </div>
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
+} ?>
+<div class="abet_doc_panel" data-tabs="#abet_tc">
+    <div class="abet_doc_page_head">
+        <h2>📜 Terms &amp; Conditions</h2>
+        <p class="abet_doc_lede">
+            The <strong>Term &amp; Conditions</strong> tab attaches event-specific terms — refund rules, entry
+            requirements, age restrictions and similar policies. The content is shown on the event details page.
+        </p>
     </div>
-<?php
+
+    <h3>🔀 Event toggles</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Option</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Active Term &amp; Conditions?</strong></td>
+                <td>Turns the terms on for this event. When off, the content is hidden and not shown on the frontend.</td>
+            </tr>
+            <tr>
+                <td><strong>Use Global Term &amp; Conditions?</strong></td>
+                <td>When on, the event displays the terms saved in the global library and the editor is hidden. Turn it
+                    off to write event-specific terms.</td>
+            </tr>
+            <tr>
+                <td><strong>Import Global Term &amp; Conditions</strong></td>
+                <td>Shown when <em>Use Global Term &amp; Conditions?</em> is off. Copies the global content into the
+                    event editor so it can be edited.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>✍️ Content</h3>
+    <p class="abet_doc_section_intro">
+        The editor accepts rich text, links, lists and media. It is only active when the event keeps its own terms
+        (that is, when <em>Use Global Term &amp; Conditions?</em> is off). Save the event to store the content.
+    </p>
+
+    <div class="abet_doc_screen" data-abet-doc-img="<?php echo esc_url(ABET_DOC_URL . '/') ?>image/43-event-editor-terms-conditions.png"><img class="abet_doc_screen_img" src="#" alt="Event editor terms and conditions"></div>
+
+    <div class="abet_doc_callout abet_doc_callout_note">
+        <strong>ℹ️ Display only</strong>
+        The terms are informational. The plugin does not add a mandatory “I accept the terms” checkbox to checkout —
+        it only shows the content on the event page while the tab is active.
+    </div>
+
+    <div class="abet_doc_callout abet_doc_callout_note">
+        <strong>ℹ️ Global T&amp;C</strong>
+        Standard terms can be defined once under <em>Global Configuration → Terms &amp; Conditions</em> and imported
+        into any event.
+    </div>
+</div>

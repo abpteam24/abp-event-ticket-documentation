@@ -1,47 +1,77 @@
 <?php
-	if ( ! defined( 'ABSPATH' ) ) {
-		exit; // Exit if accessed directly
-	} ?>
-    <div class="tab_item" data-tabs="#abpet_post">
-        <h2 class="_abp_color_theme">Transport Booking - Post Lists</h2>
-        <div class="_divider_xs"></div>
-        <label>
-            Here you can view all Transport Booking posts in one place. You can easily create, clone, edit, restore, or delete posts. Each post includes a short summary, shortcode usage, total properties/tools count, status, and other important rental details for quick and efficient management.
-        </label>
-        <div class="abp_image" data-image-href="<?php echo esc_url( ABPET_DOC_URL . '/' ) ?>image/post_lists.png">
-            <img class="_img_control" src="#" alt="Post Lists Overview">
-        </div>
-        <ul class="_abp_list_margin_xs">
-            <li>
-                <strong>🔁 Clone Post:</strong>
-                Create an exact duplicate of the selected post. The cloned post is saved as a draft and can be freely edited or customized.
-            </li>
-            <li>
-                <strong>♻️ Restore Post:</strong>
-                Recover a previously deleted or archived post and restore it back to the post list.
-            </li>
-            <li>
-                <strong>❌ Permanent Delete:</strong>
-                Permanently remove the selected post from the system. This action cannot be undone.
-            </li>
-            <li>
-                <strong>✍️ Edit Post:</strong>
-                Modify and update existing post content, settings, and configurations at any time.
-            </li>
-            <li>
-                <strong>👁️ View Post:</strong>
-                Preview how the post will appear on the live frontend website.
-            </li>
-            <li>
-                <strong>🗑️ Move to Trash:</strong>
-                Move the post to trash instead of permanently deleting it. You can restore it later if needed.
-            </li>
-        </ul>
-        <label>
-            After clicking Clone, Edit, or Add New Post, you will be redirected to the Post Details Page, where you can manage all post-related information in a structured and user-friendly interface.
-        </label>
-        <label>
-            This page allows you to fully configure your post content before publishing or updating.
-        </label>
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
+} ?>
+<div class="abet_doc_panel" data-tabs="#abet_post">
+    <div class="abet_doc_page_head">
+        <h2>📅 Event Lists</h2>
+        <p class="abet_doc_lede">
+            The <strong>Events Lists</strong> screen lists every event and provides the actions needed to create,
+            edit, clone, view, trash, restore and permanently delete events. The tab label follows the
+            <em>Label</em> set in Global Configuration.
+        </p>
     </div>
-<?php
+
+    <h3>📋 The event list</h3>
+    <p class="abet_doc_section_intro">
+        Status buttons at the top filter the list: <em>All</em>, <em>Published</em>, <em>Private</em>, <em>Draft</em>
+        and <em>Trash</em>, each with a count. The table shows the event image, title, ticket type and quantity, the
+        event's own booking shortcode, and the action buttons. Long lists are split into pages.
+    </p>
+    <div class="abet_doc_screen" data-abet-doc-img="<?php echo esc_url(ABET_DOC_URL . '/') ?>image/2-admin-events-list.png"><img class="abet_doc_screen_img" src="#" alt="Events list"></div>
+
+    <h3>⚡ Available actions</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Add New Event</strong></td>
+                <td>Open a blank event editor.</td>
+            </tr>
+            <tr>
+                <td><strong>Edit</strong></td>
+                <td>Open the event editor to change its settings, tickets, dates and content.</td>
+            </tr>
+            <tr>
+                <td><strong>Clone</strong></td>
+                <td>Duplicate an event, including its configuration, to create a similar event quickly.</td>
+            </tr>
+            <tr>
+                <td><strong>View</strong></td>
+                <td>Open the event on the frontend as customers see it.</td>
+            </tr>
+            <tr>
+                <td><strong>Move to Trash</strong></td>
+                <td>Move the event to the trash without deleting it permanently.</td>
+            </tr>
+            <tr>
+                <td><strong>Restore</strong></td>
+                <td>Restore a trashed event.</td>
+            </tr>
+            <tr>
+                <td><strong>Permanent Remove</strong></td>
+                <td>Delete the event and its data completely. This cannot be undone.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="abet_doc_callout abet_doc_callout_note">
+        <strong>ℹ️ Event editor tabs</strong>
+        Opening an event reveals the tabbed editor: <em>General</em>, <em>Ticket &amp; Price</em>, <em>Date</em>,
+        <em>Additional services</em>, <em>Attendee Form</em>, <em>Tax</em>, <em>FAQs</em>,
+        <em>Term &amp; Conditions</em> and <em>Timeline</em>. Some tabs are hidden when their feature is switched off
+        under <em>Feature ON/OFF</em>. Each tab is documented in the sections that follow.
+    </div>
+
+    <div class="abet_doc_callout abet_doc_callout_tip">
+        <strong>💡 Per-event shortcode</strong>
+        The <em>Shortcode</em> column shows <code>[abpet-post post_id="…"]</code> for that event. Copy it into any
+        page to list or link that single event; use <code>[abpet-booking post_id="…"]</code> when you want its
+        booking form on its own page.
+    </div>
+</div>

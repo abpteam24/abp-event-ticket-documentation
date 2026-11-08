@@ -1,136 +1,91 @@
 <?php
-	if ( ! defined( 'ABSPATH' ) ) {
-		exit; // Exit if accessed directly
-	} ?>
-    <div class="tab_item" data-tabs="#abpet_feature">
-        <h3 class="_abp_color_theme">Transport Booking - Features</h3>
-        <div class="_divider_xs"></div>
-        <label>
-            Transport Booking provides a powerful and flexible rental management system designed for managing properties, equipment, and bookings in a single platform. It includes all essential tools required for a complete rental business workflow. Below is an overview of the core features included in the plugin.
-        </label>
-        <ol class="_abp_list_margin">
-            <li><strong class="_abp_color_theme">All-in-One Dashboard Menu</strong></li>
-            <li><strong class="_abp_color_theme">Inventory Management System</strong></li>
-            <li><strong class="_abp_color_theme">Equipment & Property Management</strong></li>
-            <li><strong class="_abp_color_theme">Custom Order Tracking System</strong></li>
-            <li><strong class="_abp_color_theme">Property Schema Support</strong></li>
-            <li><strong class="_abp_color_theme">Developer-Friendly Architecture</strong></li>
-            <li><strong class="_abp_color_theme">Multi-Currency Support</strong></li>
-            <li><strong class="_abp_color_theme">Fully Responsive Design</strong></li>
-            <li><strong class="_abp_color_theme">Buffer Time Configuration</strong></li>
-            <li><strong class="_abp_color_theme">Flexible Date Configuration</strong></li>
-            <li><strong class="_abp_color_theme">Tax Configuration (WooCommerce Based)</strong></li>
-            <li><strong class="_abp_color_theme">Clone Property Feature</strong></li>
-            <li><strong class="_abp_color_theme">Clone Post Feature</strong></li>
-            <li><strong class="_abp_color_theme">Template System</strong></li>
-            <li><strong class="_abp_color_theme">Translation Ready</strong></li>
-            <li>
-                <strong class="_abp_color_theme">Shortcodes</strong>
-                <ul class="_abp">
-                    <li>- Post List Shortcode</li>
-                    <li>- Property List Shortcode</li>
-                </ul>
-            </li>
-            <li>
-                <strong class="_abp_color_theme">Post Listings</strong>
-                <ul class="_abp">
-                    <li>Search functionality</li>
-                    <li>Category-based filtering</li>
-                    <li>Multiple layout styles</li>
-                </ul>
-            </li>
-            <li>
-                <strong class="_abp_color_theme">Property Listings</strong>
-                <ul class="_abp">
-                    <li>Property search system</li>
-                    <li>Category-based filtering</li>
-                    <li>Booking rule selection</li>
-                    <li>Multiple layout styles</li>
-                </ul>
-            </li>
-            <li>
-                <strong class="_abp_color_theme">Multiple Pricing Options</strong>
-                <ul class="_abp">
-                    <li>- Hourly pricing</li>
-                    <li>- Daily pricing</li>
-                    <li>- Monthly pricing</li>
-                    <li>- Combined hourly & daily pricing</li>
-                    <li>- Combined monthly & daily pricing</li>
-                </ul>
-            </li>
-            <li>
-                <strong class="_abp_color_theme">Smart Booking Rules</strong>
-                <ul class="_abp">
-                    <li>- Set minimum and maximum rental duration</li>
-                    <li>- Configure booking time restrictions</li>
-                    <li>- Define flexible rental rules</li>
-                </ul>
-            </li>
-            <li>
-                <strong class="_abp_color_theme">Advanced Deposit System</strong>
-                <ul class="_abp">
-                    <li>- Fixed amount deposit</li>
-                    <li>- Percentage-based deposit</li>
-                    <li>- Fixed amount per quantity</li>
-                </ul>
-            </li>
-            <li>
-                <strong class="_abp_color_theme">Quantity Control</strong>
-                <ul class="_abp">
-                    <li>- Minimum quantity (optional)</li>
-                    <li>- Maximum quantity (optional)</li>
-                    <li>- Reserved quantity support (optional)</li>
-                </ul>
-            </li>
-            <li>
-                <strong class="_abp_color_theme">Availability Management</strong>
-                <ul class="_abp">
-                    <li>- Day-wise schedule control</li>
-                    <li>- Special date enable/disable system</li>
-                    <li>- Availability override options</li>
-                </ul>
-            </li>
-            <li>
-                <strong class="_abp_color_theme">Frontend Experience</strong>
-                <ul class="_abp">
-                    <li>- Dynamic price calculation</li>
-                    <li>- Simple and user-friendly booking interface</li>
-                    <li>- Shortcode-based property display</li>
-                </ul>
-            </li>
-            <li>
-                <strong class="_abp_color_theme">Additional Services</strong>
-                <ul class="_abp">
-                    <li>- Global additional services system</li>
-                    <li>- Custom per-post services</li>
-                </ul>
-            </li>
-            <li>
-                <strong class="_abp_color_theme">Client Information Forms</strong>
-                <ul class="_abp">
-                    <li>- Global form configuration</li>
-                    <li>- Custom per-post form builder</li>
-                </ul>
-            </li>
-            <li>
-                <strong class="_abp_color_theme">FAQ & Terms Support</strong>
-                <ul class="_abp">
-                    <li>- Global FAQ system</li>
-                    <li>- Custom FAQ per post</li>
-                    <li>- Fully editable Terms & Conditions</li>
-                </ul>
-            </li>
-            <li><strong class="_abp_color_theme">Booking / Order Management</strong></li>
-            <li><strong class="_abp_color_theme">Export Booking List (PDF) - PRO</strong></li>
-            <li><strong class="_abp_color_theme">Export Booking List (CSV) - PRO</strong></li>
-            <li><strong class="_abp_color_theme">PDF Invoice Generation - PRO</strong></li>
-            <li><strong class="_abp_color_theme">Send Email with PDF Attachment - PRO</strong></li>
-            <li><strong class="_abp_color_theme">Resend Email with PDF - PRO</strong></li>
-            <li><strong class="_abp_color_theme">Backend Order Management - PRO</strong></li>
-<!--            <li><strong class="_abp_color_theme">Location Based Price and Stock Management - PRO</strong></li>-->
-<!--            <li><strong class="_abp_color_theme">Tier Pricing System - PRO</strong></li>-->
-<!--            <li><strong class="_abp_color_theme">Seasonal Pricing - PRO</strong></li>-->
-<!--            <li><strong class="_abp_color_theme">Early Bird Pricing - PRO</strong></li>-->
-        </ol>
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
+} ?>
+<div class="abet_doc_panel" data-tabs="#abet_feature">
+    <div class="abet_doc_page_head">
+        <h2>⭐ Features</h2>
+        <p class="abet_doc_lede">
+            ABP Event Ticket combines event publishing, ticket selling, reserved seating, attendee registration, and
+            WooCommerce order handling into one plugin. The FREE features are included in ABP Event Ticket; the
+            features marked PRO require the optional ABP Event Ticket PRO add-on.
+        </p>
     </div>
-<?php
+
+    <h3>🎟️ Events &amp; Tickets</h3>
+    <ul>
+        <li>Event creation and management with a dedicated post type.</li>
+        <li>Event list with pagination and status filters.</li>
+        <li>Event edit, clone, view, trash, restore, and permanent delete actions.</li>
+        <li>General admission ticket sales and reserved seat ticket sales.</li>
+        <li>Multiple ticket types with individual pricing and quantity controls.</li>
+        <li>Minimum, maximum, and reserved quantity limits per ticket type.</li>
+        <li>Availability tracked per ticket type <em>and per session</em>.</li>
+    </ul>
+
+    <h3>🪑 Reserved Seating</h3>
+    <ul>
+        <li>Reusable seat plans with a drag-and-drop designer.</li>
+        <li>Reusable ticket types with a colour, prefix, icon or image.</li>
+        <li>Custom cell labels, dimensions, spacing, spanning and layouts.</li>
+        <li>Ticket-type assignment to seats, with a per-type seat count for each plan.</li>
+        <li>Decoration items (doors, stairs, aisles, windows and more) for non-seatable areas.</li>
+        <li>Seat plans attached to events with a frontend name and per-type prices.</li>
+    </ul>
+
+    <h3>🗓️ Scheduling</h3>
+    <ul>
+        <li>Specific-date and periodic-date event schedules.</li>
+        <li>Date-wise and day-wise time configuration.</li>
+        <li>Special on/off dates and weekend rules for periodic schedules.</li>
+        <li>Advance booking limits and sale-closing buffer controls.</li>
+        <li>Frontend date UI that adapts to the number of available dates.</li>
+    </ul>
+
+    <h3>🧾 Content &amp; Registration</h3>
+    <ul>
+        <li>Configurable attendee information (client) forms.</li>
+        <li>Optional additional services with quantity, price and max-quantity limits.</li>
+        <li>Event FAQs and Terms &amp; Conditions.</li>
+        <li>Event timeline with time, title, and description entries.</li>
+        <li>Event speakers with profiles (bio, photo, designation, company, website, social links).</li>
+    </ul>
+
+    <h3>🗂️ Taxonomies &amp; Display</h3>
+    <ul>
+        <li>Location, category, organizer, and brand management.</li>
+        <li>Google Location Map with an admin search-and-select picker and a key-free iframe fallback.</li>
+        <li>Three frontend location map styles: default, light, and modern.</li>
+        <li>Event features, related events, gallery, and image slider.</li>
+        <li>Three details-page templates: default, light, and modern.</li>
+        <li>Event search, filtering, and pagination.</li>
+    </ul>
+
+    <h3>🛒 Commerce &amp; Global Configuration</h3>
+    <ul>
+        <li>WooCommerce cart, checkout, payment, tax, coupon, and order integration.</li>
+        <li>Booking and order details in the WordPress dashboard.</li>
+        <li>Global and event-specific configuration with reusable data.</li>
+        <li>Feature enable/disable controls for every module.</li>
+        <li>Translation-ready, with a bundled <code>.pot</code> file.</li>
+        <li>Polylang-compatible frontend language filtering when Polylang is active.</li>
+        <li>Shortcode-based embedding — the plugin's post type uses the classic editor, not Gutenberg.</li>
+    </ul>
+
+    <div class="abet_doc_screen" data-abet-doc-img="<?php echo esc_url(ABET_DOC_URL . '/') ?>image/47-frontend-event-list-features.png"><img class="abet_doc_screen_img" src="#" alt="Frontend event list features"></div>
+
+    <h3>👑 PRO Add-on</h3>
+    <ul>
+        <li><span class="abet_doc_badge abet_doc_badge_pro">PRO</span> Seasonal and Early Bird discounts, configured globally or per event.</li>
+        <li><span class="abet_doc_badge abet_doc_badge_pro">PRO</span> Partial payments with deposit and balance tracking.</li>
+        <li><span class="abet_doc_badge abet_doc_badge_pro">PRO</span> Customer cancellation requests with an event-time cutoff and administrator approval.</li>
+        <li><span class="abet_doc_badge abet_doc_badge_pro">PRO</span> PDF tickets and attendee-list PDFs, customizable booking emails, and resend tools.</li>
+        <li><span class="abet_doc_badge abet_doc_badge_pro">PRO</span> The <code>[abpet-ticket]</code> ticket lookup, PDF download, and check-in page, with optional QR codes on booking PDFs.</li>
+        <li><span class="abet_doc_badge abet_doc_badge_pro">PRO</span> Admin-created/edited bookings, booking CSV export, session statistics, and ticket check-in.</li>
+    </ul>
+    <p>
+        <a href="https://abp-team.com/downloads/abp-event-ticket-pro/" target="_blank" rel="noopener">
+            Learn about ABP Event Ticket PRO
+        </a>
+    </p>
+</div>

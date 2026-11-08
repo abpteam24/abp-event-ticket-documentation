@@ -1,26 +1,79 @@
 <?php
-	if ( ! defined( 'ABSPATH' ) ) {
-		exit; // Exit if accessed directly
-	} ?>
-    <div class="tab_item" data-tabs="#abpet_menu_lists">
-        <h3 class="_abp_color_theme">Transport Booking - Menu</h3>
-        <div class="_divider_xs"></div>
-        <label>
-            After installing Transport Booking, you will get a dedicated admin dashboard menu that centralizes all rental management features in one place. You can customize the menu label and icon from the Icon & Label Configuration settings. All plugin modules are organized into structured tabs under this main menu, allowing you to manage bookings, properties, pricing, availability, inventory, orders, and system settings from a clean and user-friendly interface.
-        </label>
-        <div class="abp_image" data-image-href="<?php echo esc_url( ABPET_DOC_URL . '/' ) ?>image/menu_lists.png">
-            <img class="_img_control" src="#" alt="Transport Booking Menu Overview">
-        </div>
-        <ul class="_abp_list_margin">
-            <li><strong class="_color_theme"><span class="_mar_r_xs">🪜</span> Top Quick Menu</strong></li>
-            <li><strong class="_color_theme"><span class="_mar_r_xs">🔨</span> Post Lists</strong> — Manage all rental posts</li>
-            <li><strong class="_color_theme"><span class="_mar_r_xs">🏠</span> Properties</strong> — Manage rental properties and inventory</li>
-            <li><strong class="_color_theme"><span class="_mar_r_xs">📋</span> Orders</strong> — View and manage all booking orders</li>
-            <li><strong class="_color_theme"><span class="_mar_r_xs">📦</span> Add Order (PRO)</strong> — Manually create orders from admin panel</li>
-            <li><strong class="_color_theme"><span class="_mar_r_xs">🌐</span> Global Data</strong> — Configure global settings and shared data</li>
-            <li><strong class="_color_theme"><span class="_mar_r_xs">⚙️</span> Configuration</strong> — Manage all plugin configurations and settings</li>
-            <li><strong class="_color_theme"><span class="_mar_r_xs">🛡️</span> Status</strong> — System status and health information</li>
-            <li><strong class="_color_theme"><span class="_mar_r_xs">📚</span> Documentation</strong> — Access plugin documentation and guides</li>
-        </ul>
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
+} ?>
+<div class="abet_doc_panel" data-tabs="#abet_menu_lists">
+    <div class="abet_doc_page_head">
+        <h2>🧭 Menu Overview</h2>
+        <p class="abet_doc_lede">
+            After activation, ABP Event Ticket adds one top-level admin menu. All plugin screens are tabs inside that
+            menu, so you can move between events, orders, ticket/seat plans and global settings without leaving the
+            plugin.
+        </p>
     </div>
-<?php
+
+    <h3>📚 Main menu tabs</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Menu</th>
+                <th>Purpose</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Dashboard</strong></td>
+                <td>Welcome screen with KPI cards, today's sessions, quick actions, recent orders, system status and
+                    content breakdown.</td>
+            </tr>
+            <tr>
+                <td><strong>Events Lists</strong></td>
+                <td>The event list, with a live event count in the tab. Create, edit, clone, view, trash, restore and
+                    permanently delete events.</td>
+            </tr>
+            <tr>
+                <td><strong>Orders</strong></td>
+                <td>All bookings with filters, ticket/seat details, statuses, billing and attendee information. The
+                    tab shows the total order count.</td>
+            </tr>
+            <tr>
+                <td><strong>Add Order</strong> (PRO)</td>
+                <td>Create a booking manually for a customer by choosing the event, session, ticket or seat, and
+                    billing details.</td>
+            </tr>
+            <tr>
+                <td><strong>Cancel Requests</strong> (PRO)</td>
+                <td>Review customer cancellation requests and approve or reject them. The tab shows the number of
+                    pending requests.</td>
+            </tr>
+            <tr>
+                <td><strong>Ticket/Seat Plan</strong></td>
+                <td>Global ticket types, decoration items and reusable seat plans with the seating designer.</td>
+            </tr>
+            <tr>
+                <td><strong>Global Configuration</strong></td>
+                <td>Plugin-wide settings and reusable data: labels and slugs, feature toggles, dates, ticket-related
+                    libraries, taxonomies, slider, contact details and CSS properties. When PRO is active it also
+                    includes PDF, Order Lists PDF, Order Lists CSV, E-Mail, Partial Payment and Global Discount
+                    settings.</td>
+            </tr>
+            <tr>
+                <td><strong>Documentation</strong></td>
+                <td>Built-in quick-start reference for the plugin.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>⚡ Quick actions</h3>
+    <p class="abet_doc_section_intro">
+        The header of every plugin screen includes shortcut buttons: create a new event, add a location, add a
+        category (when enabled), and on the Dashboard a row of quick actions for the most-used configuration screens.
+    </p>
+
+    <div class="abet_doc_callout abet_doc_callout_note">
+        <strong>ℹ️ Renaming the menu</strong>
+        The menu label and slug are set on the first Global Configuration tab (the tab title follows the
+        <em>Label</em> value, defaulting to <em>Events</em>) using the Label and Slug fields. The
+        <em>Events Lists</em> tab uses the label you enter there.
+    </div>
+</div>

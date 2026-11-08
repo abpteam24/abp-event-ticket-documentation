@@ -1,54 +1,98 @@
 <?php
-	if ( ! defined( 'ABSPATH' ) ) {
-		exit; // Exit if accessed directly
-	} ?>
-    <div class="tab_item" data-tabs="#abpet_client_form">
-        <h2 class="_abp_color_theme">Client Forms Configuration</h2>
-        <div class="_divider_xxs"></div>
-        <label>
-            The Client Forms Configuration system allows you to manage and customize the forms used to collect information from clients during the booking or rental process. Like Additional Services, this feature supports both global and post-level configuration for maximum flexibility.
-        </label>
-        <h6 class="_abp">🌍 Global Client Forms</h6>
-        <i>
-            From the Global Configuration panel, you can create and manage a standard set of client form fields that will be used across all posts.
-        </i>
-        <ul class="_abp_list_margin_xs">
-            <li>👉 Define global form fields (e.g. Name, Email, Phone, Address, ID number, etc.)</li>
-            <li>👉 Enable or disable specific fields globally</li>
-            <li>👉 Maintain a consistent form structure for all properties</li>
-        </ul>
-        <h6 class="_abp">🏠 Custom Post-Level Forms</h6>
-        <i>
-            Each individual post can also have its own custom client form configuration.
-        </i>
-        <ul class="_abp_list_margin_xs">
-            <li>👉 Import form fields from global configuration</li>
-            <li>👉 Add new custom fields specific to that post</li>
-            <li>👉 Modify imported fields (label, type, required/optional)</li>
-            <li>👉 Remove unnecessary fields per post</li>
-        </ul>
-        <h6 class="_abp">🔄 Import & Customization System</h6>
-        <ul class="_abp_list_margin_xs">
-            <li>👉 One-click import from global forms</li>
-            <li>👉 Fully editable after import</li>
-            <li>👉 Combine global and custom fields in a single form</li>
-            <li>👉 Control field order, validation, and requirements</li>
-        </ul>
-        <h6 class="_abp">⚙️ Smart Behavior</h6>
-        <ul class="_abp_list_margin_xs">
-            <li>Global forms act as a default template</li>
-            <li>Each post can override or extend the global structure</li>
-            <li>Changes in global configuration do not overwrite existing post-level forms</li>
-        </ul>
-        <h6 class="_abp">🚀 Benefits</h6>
-        <ul class="_abp_list_margin_xs">
-            <li>👉 Standardized data collection across all properties</li>
-            <li>👉 Faster setup using reusable form templates</li>
-            <li>👉 Full flexibility for different property requirements</li>
-            <li>👉 Scalable system for large rental platforms</li>
-        </ul>
-        <div class="abp_image" data-image-href="<?php echo esc_url( ABPET_DOC_URL . '/' ) ?>image/client_form.png">
-            <img class="_img_control" src="#" alt="Client Forms Configuration Overview">
-        </div>
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
+} ?>
+<div class="abet_doc_panel" data-tabs="#abet_client_form">
+    <div class="abet_doc_page_head">
+        <h2>🧾 Attendee Form</h2>
+        <p class="abet_doc_lede">
+            The <strong>Attendee Form</strong> collects information from attendees at checkout. Add the fields you need
+            — such as name, email, phone, or custom questions — and the data is stored with the booking.
+        </p>
     </div>
-<?php
+
+    <h3>🔀 Event toggles</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Option</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Attendee Form?</strong></td>
+                <td>Turns the attendee form on for this event. When off, no attendee fields are requested. Shown when
+                    the <em>Attendee Form</em> feature is enabled.</td>
+            </tr>
+            <tr>
+                <td><strong>Use Global Attendee Form?</strong></td>
+                <td>When on, the event uses the fields from the global library and the table is hidden. Turn it off to
+                    build a custom form for this event.</td>
+            </tr>
+            <tr>
+                <td><strong>Import Global Attendee Form</strong></td>
+                <td>Shown when <em>Use Global Attendee Form?</em> is off. Copies the global fields into the event so they
+                    can be edited.</td>
+            </tr>
+            <tr>
+                <td><strong>Same Attendee?</strong></td>
+                <td>When on, one set of attendee details is collected for the whole booking. Shown only when the
+                    <em>Same Attendee</em> feature is enabled.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>📋 Form fields</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Column</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Form Title</strong></td>
+                <td>The label shown to the customer. Required.</td>
+            </tr>
+            <tr>
+                <td><strong>Unique ID</strong></td>
+                <td>The field key used to store the answer. Required and must be unique.</td>
+            </tr>
+            <tr>
+                <td><strong>Form Type</strong></td>
+                <td><em>Text</em>, <em>E-Mail</em>, <em>Number</em>, <em>Select</em>, <em>Checkbox</em>,
+                    <em>Radio</em>, <em>Textarea</em> or <em>Date</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>Value Option</strong></td>
+                <td>Choices for <em>Select</em>, <em>Checkbox</em> and <em>Radio</em> fields.</td>
+            </tr>
+            <tr>
+                <td><strong>Default Value</strong></td>
+                <td>Optional pre-filled value, or the default date for a <em>Date</em> field.</td>
+            </tr>
+            <tr>
+                <td><strong>Required</strong></td>
+                <td>Whether the customer must complete the field.</td>
+            </tr>
+            <tr>
+                <td><strong>Action</strong></td>
+                <td>Drag to reorder, or delete the field.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="abet_doc_section_intro">
+        Use <em>Add New Form Item</em> to add a field. Save the event to store the form.
+    </p>
+
+    <div class="abet_doc_screen" data-abet-doc-img="<?php echo esc_url(ABET_DOC_URL . '/') ?>image/37-event-editor-attendee-form.png"><img class="abet_doc_screen_img" src="#" alt="Event editor attendee form"></div>
+
+    <div class="abet_doc_callout abet_doc_callout_tip">
+        <strong>💡 Reuse global fields</strong>
+        A default set of form fields can be defined under <em>Global Configuration → Attendee Form</em> and imported
+        into any event with <em>Import Global Attendee Form</em>.
+    </div>
+</div>

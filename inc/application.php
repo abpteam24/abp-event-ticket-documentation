@@ -1,26 +1,48 @@
 <?php
-	if ( ! defined( 'ABSPATH' ) ) {
-		exit; // Exit if accessed directly
-	} ?>
-    <div class="tab_item" data-tabs="#abpet_application">
-        <h3 class="_abp_color_theme">Transport Booking - Applications</h3>
-        <div class="_divider_xs"></div>
-        <label>
-            Transport Booking is a flexible rental and booking solution that can be used for a wide range of business models. It supports property rentals, vehicle rentals, equipment booking, appointment scheduling, and many other rentable goods or services. Its modular configuration system makes it suitable for both simple and advanced rental management systems.
-        </label>
-        <ul class="_abp_list_margin">
-            <li><strong class="_abp_color_theme">🏡 Property Rental</strong></li>
-            <li><strong class="_abp_color_theme">🚗 Vehicle Rental</strong></li>
-            <li><strong class="_abp_color_theme">🚲 Bike Rental</strong></li>
-            <li><strong class="_abp_color_theme">🚙 Car Rental</strong></li>
-            <li><strong class="_abp_color_theme">🏨 Resort Booking System</strong></li>
-            <li><strong class="_abp_color_theme">📅 Doctor / Lawyer Appointment Booking</strong></li>
-            <li><strong class="_abp_color_theme">🛠️ Equipment Rental</strong></li>
-            <li><strong class="_abp_color_theme">👗 Dress / Costume Rental</strong></li>
-            <li><strong class="_abp_color_theme">⛵ Yacht / Boat Rental</strong></li>
-            <li><strong class="_abp_color_theme">🏑 Sports Equipment Rental</strong></li>
-            <li><strong class="_abp_color_theme">🏢 Office Space Rental</strong></li>
-            <li><strong class="_abp_color_theme">🏠 Any Type of Goods & Property Rental</strong></li>
-        </ul>
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
+} ?>
+<div class="abet_doc_panel" data-tabs="#abet_application">
+    <div class="abet_doc_page_head">
+        <h2>📌 Applications</h2>
+        <p class="abet_doc_lede">
+            ABP Event Ticket is flexible enough for almost any ticketed or registration-based event. Whether you run
+            general admission or fully reserved seating, the same workflow applies: create an event, define tickets,
+            and publish it.
+        </p>
     </div>
-<?php
+
+    <h3>🎯 Common use cases</h3>
+    <div class="abet_doc_cards">
+        <div class="abet_doc_card">
+            <h4>🎤 Concerts &amp; Shows</h4>
+            <p>Reserved seating with seat plans, tiered ticket types, and date-based performances.</p>
+        </div>
+        <div class="abet_doc_card">
+            <h4>🏛️ Conferences &amp; Summits</h4>
+            <p>Multiple ticket types, speaker profiles, a full timeline, and attendee registration forms.</p>
+        </div>
+        <div class="abet_doc_card">
+            <h4>🎪 Festivals</h4>
+            <p>Periodic dates, capacity controls, additional services, and general admission tickets.</p>
+        </div>
+        <div class="abet_doc_card">
+            <h4>🗣️ Workshops &amp; Classes</h4>
+            <p>Day-wise schedules, limited capacity, and simple registration forms.</p>
+        </div>
+        <div class="abet_doc_card">
+            <h4>⚽ Sports &amp; Tournaments</h4>
+            <p>Seat plans with ticket-type assignment and real-time seat availability.</p>
+        </div>
+        <div class="abet_doc_card">
+            <h4>💻 Online Events</h4>
+            <p>Set the event type to Online so the details page shows <em>Online / TBA</em> instead of a physical venue. Tickets, dates, and booking work exactly the same way.</p>
+        </div>
+    </div>
+
+    <div class="abet_doc_callout abet_doc_callout_tip">
+        <strong>💡 Mix and match</strong>
+        Enable only the modules you need under <em>Global Configuration → Feature ON/OFF</em>. Disabled modules are
+        hidden across the admin and frontend, keeping the interface focused.
+    </div>
+</div>
